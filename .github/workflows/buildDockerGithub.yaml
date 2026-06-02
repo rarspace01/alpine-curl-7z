@@ -19,12 +19,12 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.CR_TOKEN }}
     - uses: actions/delete-package-versions@v5
-      with: 
+      with:
         owner: 'rarspace01'
-        package-name: 'alpine-curl-7z-package'
-        package-type: 'docker'
+        package-name: 'alpine-curl-7z'
+        package-type: 'container'
         token: ${{ secrets.CR_TOKEN }}
         min-versions-to-keep: 10
-        delete-only-pre-release-versions: "true"  
+        delete-only-pre-release-versions: "true"
     #- run: docker buildx create --name mybuilder --driver docker-container --bootstrap --use
     #- run: docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/i386,linux/ppc64le,linux/s390x . --tag ghcr.io/rarspace01/alpine-curl-7z:latest --push

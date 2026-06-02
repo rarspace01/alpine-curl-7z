@@ -21,7 +21,7 @@ jobs:
     - uses: actions/delete-package-versions@v5
       with: 
         owner: 'rarspace01'
-        package-name: 'aöpine-curl-7z-package'
+        package-name: 'alpine-curl-7z-package'
         package-type: 'docker'
         token: ${{ secrets.CR_TOKEN }}
         min-versions-to-keep: 10
